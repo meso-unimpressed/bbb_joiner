@@ -1,0 +1,30 @@
+version: 1.0
+shards:
+  baked_file_system:
+    github: schovi/baked_file_system
+    version: 0.9.8
+
+  docker:
+    github: repomaa/docker.cr
+    version: 0.1.2
+
+  env_config:
+    github: repomaa/env_config.cr
+    commit: a3ef5b955f27e2c65de2fe0ff41718e2eea7c06f
+
+  pool:
+    github: ysbaddaden/pool
+    version: 0.2.3
+
+  radix:
+    github: luislavena/radix
+    version: 0.3.9
+
+  redis:
+    github: stefanwille/crystal-redis
+    version: 2.6.0
+
+  sentry:
+    github: repomaa/sentry
+    commit: 3b1a58a357f548d93ee01348e1a4e156c340f756
+

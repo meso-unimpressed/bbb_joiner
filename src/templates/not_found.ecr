@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Not found</title>
+		<link rel="stylesheet" href="<%= static_asset("main.css") %>">
+	</head>
+	<body class="h-screen bg-gray-100 text-gray-800">
+		<div class="h-full flex px-4 items-center justify-center">
+			<div class="text-center">
+				<h1 class="text-5xl font-bold"><span class="text-6xl font-black text-teal-600 tracking-wide leading-none">404</span><br/>Not found</h1>
+
+				<p class="mt-16 text-xl font-thin">
+					<%- if (id = @id) != nil %>
+						The link with the id <%= id %> to join the conference is either invalid or expired
+					<%- else -%>
+						The page you are looking for does not exist
+					<%- end -%>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Join conference</title>
+		<link rel="stylesheet" href="<%= static_asset("main.css") %>">
+	</head>
+	<body class="h-screen bg-gray-200 text-gray-800">
+		<div class="h-full px-4 py-8 mx-auto md:w-2/3 lg:w-1/2">
+			<h1 class="text-3xl font-bold">You have been invited to join a conference!</h1>
+
+			<div class="mt-12">
+				<form method="POST">
+					<input type="hidden" name="csrf_token" value="<%= csrf_token %>"/>
+					<div class="flex items-stretch">
+						<input class="focus:shadow-outline shadow-inner rounded rounded-r-none p-1 px-2 w-3/4 md:w-4/5 lg:w-5/6" type="text" name="name" placeholder="Your name" autofocus required/>
+						<input class="font-bold text-lg focus:outline-none focus:shadow-outline cursor-pointer hover:bg-teal-800 rounded rounded-l-none p-2 px-4 w-1/4 md:w-1/5 lg:w-1/6 bg-teal-600 text-gray-100" type="submit" value="Join!"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+

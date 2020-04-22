@@ -1,0 +1,11 @@
+/docs/
+/lib/
+/bin/
+/.shards/
+*.dwarf
+/node_modules
+/public
+/docker-compose.yml
+/docker-compose.dev.yml
+/Dockerfile
+/Dockerfile.dev

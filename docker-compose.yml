@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  app:
+    image: repomaa/bbb_joiner:latest
+    build: .
+    restart: on-failure
+    environment:
+      SECRET: ${SECRET}
+      BBB_SECRET: ${BBB_SECRET}
+      ACCESS_TOKEN: ${ACCESS_TOKEN}
+      ROOT_PATH: ${ROOT_PATH:-/join}
+      BBB_URL: ${BBB_URL:-/bigbluebutton/api}
+      LINK_TTL: ${LINK_TTL:-86400}
+      REDIS_HOST: redis
+    ports:
+      - ${PORT:-3000}:3000
+    depends_on:
+      - redis
+
+  redis:
+    image: redis
+    restart: on-failure

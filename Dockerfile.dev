@@ -1,0 +1,9 @@
+FROM crystallang/crystal:0.34.0-alpine AS build
+RUN apk add --upgrade make nodejs npm
+WORKDIR /app
+ENTRYPOINT ["/usr/bin/make", "-j2"]
+CMD ["watch"]
+VOLUME /app/bin
+VOLUME /app/lib
+VOLUME /app/node_modules
+VOLUME /app/.cache

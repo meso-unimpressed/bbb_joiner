@@ -1,0 +1,32 @@
+name: bbb_joiner
+version: 0.1.0
+
+authors:
+  - Joakim Repomaa <mail@j.repomaa.com>
+
+targets:
+  bbb_joiner:
+    main: src/bbb_joiner.cr
+
+dependencies:
+  baked_file_system:
+    github: schovi/baked_file_system
+    version: 0.9.8
+  radix:
+    github: luislavena/radix
+  redis:
+    github: stefanwille/crystal-redis
+    version: ~> 2.6
+  env_config:
+    github: repomaa/env_config.cr
+  docker:
+    github: repomaa/docker.cr
+
+development_dependencies:
+  sentry:
+    github: repomaa/sentry
+    branch: topic/postinstall
+
+crystal: 0.34.0
+
+license: MIT
